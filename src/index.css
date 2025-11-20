@@ -2,26 +2,69 @@
 @tailwind components;
 @tailwind utilities;
 
-/* -------------------------------------------
-   GLOBAL GOOGLE UI RESET + TYPOGRAPHY
--------------------------------------------- */
+/* --------------------------------------------------
+   GLOBAL TYPOGRAPHY — EVERCARE GOOGLE STYLE
+--------------------------------------------------- */
 
-html, body {
+/* Increase global font size for readability */
+html {
+  font-size: 18px; /* Google Accessibility Standard */
+  scroll-behavior: smooth;
+}
+
+body {
   margin: 0;
   padding: 0;
   background: #ffffff;
-  color: #202124; /* Google Black */
-  font-family: 'Inter', 'Roboto', sans-serif;
+  color: #202124; /* Google matte black */
+  font-family: "Google Sans Text", Inter, Roboto, sans-serif;
+  line-height: 1.55; /* Improved readability */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Smooth Scroll */
-html {
-  scroll-behavior: smooth;
+/* --------------------------------------------------
+   HEADINGS — MATERIAL DESIGN 3 SCALE
+--------------------------------------------------- */
+
+h1 {
+  font-size: 2.5rem;      /* 40px */
+  font-weight: 600;
+  letter-spacing: -0.5px;
 }
 
-/* Links inherit Google blue */
+h2 {
+  font-size: 2rem;        /* 32px */
+  font-weight: 600;
+  letter-spacing: -0.4px;
+}
+
+h3 {
+  font-size: 1.75rem;     /* 28px */
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+h4 {
+  font-size: 1.5rem;      /* 24px */
+  font-weight: 500;
+  letter-spacing: -0.2px;
+}
+
+h5 {
+  font-size: 1.25rem;     /* 20px */
+  font-weight: 500;
+}
+
+h6 {
+  font-size: 1.125rem;    /* 18px */
+  font-weight: 500;
+}
+
+/* --------------------------------------------------
+   LINKS — GOOGLE BLUE
+--------------------------------------------------- */
+
 a {
   color: #4285F4;
   text-decoration: none;
@@ -30,17 +73,35 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Buttons default */
+/* --------------------------------------------------
+   BUTTONS — INCREASED SIZE FOR ACCESSIBILITY
+--------------------------------------------------- */
+
 button {
-  font-family: 'Inter', 'Roboto', sans-serif;
+  font-family: "Google Sans Text", Inter, Roboto, sans-serif;
+  font-size: 1rem;          /* 18px */
+  font-weight: 500;
+  padding: 0.65rem 1.25rem; /* Improved touch target */
+  border-radius: 10px;
 }
 
-/* Remove tap highlight on mobile */
+/* --------------------------------------------------
+   NAVBAR — MENU FONT INCREASE
+--------------------------------------------------- */
+
+.nav-menu-item {
+  font-size: 1.05rem;       /* Slightly larger for balance */
+  font-weight: 500;
+}
+
+/* --------------------------------------------------
+   UTILITIES
+--------------------------------------------------- */
+
 * {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Card defaults for consistency */
 .card-default {
   background: #ffffff;
   border: 1px solid #e4e4e4;
@@ -48,7 +109,6 @@ button {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
 }
 
-/* Flex center utility */
 .flex-center {
   display: flex;
   align-items: center;
