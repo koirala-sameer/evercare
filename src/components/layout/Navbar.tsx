@@ -17,10 +17,10 @@ const Navbar = () => {
 
         {/* Nav Items */}
         <nav className="hidden md:flex items-center space-x-10 text-gray-700 font-medium">
-          <a href="#" className="hover:text-gray-900">Hardware</a>
-          <a href="#" className="hover:text-gray-900">Services</a>
-          <a href="#" className="hover:text-gray-900">Add-ons</a>
-          <a href="#" className="hover:text-gray-900">Pricing</a>
+          <a href="/" className="no-underline hover:no-underline hover:text-gray-900 transition">Home</a>
+          <a href="/our-story" className="no-underline hover:no-underline hover:text-gray-900 transition">Our Story</a>
+          <a href="/platform" className="no-underline hover:no-underline hover:text-gray-900 transition">The Platform</a>
+          <a href="/services" className="no-underline hover:no-underline hover:text-gray-900 transition">Services</a>
         </nav>
 
         {/* CTA Button */}
