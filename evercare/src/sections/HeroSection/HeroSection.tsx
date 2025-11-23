@@ -61,9 +61,9 @@ export default function HeroSection() {
           {/* CTAs */}
           <div className="flex flex-wrap gap-4 mb-12">
 
-            {/* UPDATED MAIN CTA */}
+            {/* Main CTA */}
             <Link
-              to="/services-and-pricing"
+              to="/addons"
               className="bg-google-blue text-white px-10 py-3.5 rounded-xl text-[17px] font-semibold 
               shadow-lg hover:-translate-y-1 hover:shadow-2xl transition-all duration-300"
             >
@@ -99,8 +99,9 @@ export default function HeroSection() {
 
         </div>
 
-        {/* PHONE MOCKUP */}
+        {/* RIGHT PHONE MOCKUP */}
         <div className="flex justify-center">
+
           <div className="relative bg-[#1a1a1a] w-[340px] h-[680px] rounded-[40px] shadow-[0_40px_80px_rgba(0,0,0,0.35)] p-3">
 
             {/* Notch */}
@@ -117,38 +118,43 @@ export default function HeroSection() {
               {/* Grid */}
               <div className="grid grid-cols-2 gap-4 mt-4">
 
+                {/* Live Camera */}
                 <div className="bg-white/20 backdrop-blur rounded-xl p-4">
                   <span className="text-3xl">🎥</span>
                   <div className="font-semibold text-[15px] mt-3">Live Camera</div>
                   <div className="text-xs opacity-90">• Recording</div>
                 </div>
 
+                {/* Door */}
                 <div className="bg-white/20 backdrop-blur rounded-xl p-4">
                   <span className="text-3xl">🚪</span>
                   <div className="font-semibold text-[15px] mt-3">Door Status</div>
                   <div className="text-xs opacity-90">• Secured</div>
                 </div>
 
+                {/* Wellbeing */}
                 <div className="bg-white/20 backdrop-blur rounded-xl p-4">
                   <span className="text-3xl">💚</span>
                   <div className="font-semibold text-[15px] mt-3">Wellbeing</div>
                   <div className="text-xs opacity-90">• Good</div>
                 </div>
 
+                {/* SOS (soft Google Red) */}
                 <div className="bg-google-red/20 text-white backdrop-blur rounded-xl p-4 border border-google-red/30">
                   <span className="text-3xl">🆘</span>
                   <div className="font-semibold text-[15px] mt-3">Emergency</div>
                   <div className="text-xs opacity-90">• Tap to trigger</div>
                 </div>
-
               </div>
 
+              {/* Bottom CTA */}
               <button className="mt-auto bg-white text-google-blue font-semibold py-3 rounded-xl shadow text-center hover:bg-gray-100 transition">
                 View Dashboard →
               </button>
 
             </div>
           </div>
+
         </div>
       </div>
     </section>

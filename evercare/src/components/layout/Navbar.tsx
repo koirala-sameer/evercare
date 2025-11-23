@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";  // <<— SAFE FIX
 
 const Navbar = () => {
   const [regionOpen, setRegionOpen] = useState(false);
@@ -45,12 +44,12 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
         {/* BRAND WORDMARK */}
-        <Link to="/" className="flex items-center no-underline hover:no-underline">
+        <a href="/" className="flex items-center no-underline hover:no-underline">
           <span
             className="flex items-center"
             style={{
               fontFamily: "Google Sans Text, Inter, sans-serif",
-              fontSize: "2.15rem",
+              fontSize: "2.15rem",           // Subtle upscale (Google-style)
               color: "#202124",
               letterSpacing: "-0.25px",
             }}
@@ -58,28 +57,16 @@ const Navbar = () => {
             <span style={{ fontWeight: 500 }}>Ever</span>
             <span style={{ fontWeight: 600, marginLeft: "1px" }}>Care</span>
           </span>
-        </Link>
+        </a>
 
         {/* NAVIGATION */}
         <nav className="hidden md:flex items-center space-x-10 text-gray-700 font-medium">
-          <Link to="/our-story" className="nav-menu-item hover:text-gray-900 transition">
-            Our Story
-          </Link>
-
-          <Link to="/platform" className="nav-menu-item hover:text-gray-900 transition">
-            The Platform
-          </Link>
-
-          {/* FIX: Correct Services route */}
-          <Link
-            to="/services-and-pricing"
-            className="nav-menu-item hover:text-gray-900 transition"
-          >
-            Services
-          </Link>
+          <a href="/our-story" className="nav-menu-item hover:text-gray-900 transition">Our Story</a>
+          <a href="/platform" className="nav-menu-item hover:text-gray-900 transition">The Platform</a>
+          <a href="/services" className="nav-menu-item hover:text-gray-900 transition">Services</a>
         </nav>
 
-        {/* RIGHT ICONS */}
+        {/* RIGHT-SIDE ICONS */}
         <div className="hidden md:flex items-center space-x-5">
 
           {/* Help */}
@@ -147,8 +134,8 @@ const Navbar = () => {
               strokeWidth="1.5" stroke="currentColor"
               className="w-6 h-6 text-black">
               <path strokeLinecap="round" strokeLinejoin="round"
-                d="M15.75 9A3.75 3.75 
-                0 1 1 12 5.25 3.75 3.75 
+                d="M15.75 9A3.75 3.75 0 
+                1 1 12 5.25 3.75 3.75 
                 0 0 1 15.75 9Z"/>
               <path strokeLinecap="round" strokeLinejoin="round"
                 d="M4.5 20.25a8.25 8.25 

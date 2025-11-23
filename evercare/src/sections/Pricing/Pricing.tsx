@@ -16,6 +16,7 @@ export default function Pricing() {
 
       <div className="max-w-5xl mx-auto px-6 relative z-10">
 
+        {/* PAGE HEADER */}
         <div className="text-center mb-20">
           <h1 className="text-6xl font-extrabold text-google-black mb-4">
             EverCare One
@@ -26,9 +27,11 @@ export default function Pricing() {
           </p>
         </div>
 
+        {/* SINGLE PRICING CARD */}
         <div className="bg-white/70 backdrop-blur-xl border border-gray-200 
             rounded-3xl p-12 shadow-[0_25px_80px_rgba(0,0,0,0.12)]">
 
+          {/* Price block */}
           <div className="text-center mb-12">
             <span className="text-6xl font-extrabold text-google-blue">$9.99</span>
             <span className="text-google-gray text-xl font-medium">/month</span>
@@ -37,6 +40,7 @@ export default function Pricing() {
             </div>
           </div>
 
+          {/* Feature List */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-y-6 gap-x-12 mb-12">
 
             {[
@@ -58,10 +62,10 @@ export default function Pricing() {
 
           </div>
 
-          {/* UPDATED CTA */}
+          {/* CTA */}
           <div className="text-center mt-6">
             <Link
-              to="/services-and-pricing"
+              to="/addons"
               className="bg-google-blue text-white px-14 py-4 rounded-xl text-xl font-semibold
                 shadow-lg hover:bg-blue-700 hover:-translate-y-1 hover:shadow-2xl transition-all"
             >
