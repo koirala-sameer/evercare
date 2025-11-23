@@ -15,8 +15,8 @@ export default function Home() {
       <HeroSection />
       <InstantTrustStrip />
       <FeaturesGrid />
-      <Testimonials />
       <Pricing />
+      <Testimonials />
       <FinalCTA />
 
       {/* Floating Chat Bubble + Panel */}

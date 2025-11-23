@@ -114,3 +114,13 @@ button {
   align-items: center;
   justify-content: center;
 }
+
+/* --------------------------------------------------
+   🔧 FIX NAVBAR CIRCLE ICON BUTTONS (critical)
+   Prevent global button padding from hiding icons
+--------------------------------------------------- */
+
+.nav-icon-btn {
+  padding: 0 !important;
+  border-radius: 9999px !important;
+}
