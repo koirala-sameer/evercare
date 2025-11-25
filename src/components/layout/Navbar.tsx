@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";  // <<— SAFE FIX
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [regionOpen, setRegionOpen] = useState(false);
@@ -44,8 +44,14 @@ const Navbar = () => {
     <header className="w-full bg-white border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
 
-        {/* BRAND WORDMARK */}
-        <Link to="/" className="flex items-center no-underline hover:no-underline">
+        {/* BRAND ICON + WORDMARK */}
+        <Link to="/" className="flex items-center no-underline hover:no-underline space-x-3">
+          <img
+            src="/images/logo.png"   // served from public/images/logo.png
+            alt="EverCare Logo Icon"
+            className="w-12 h-12 object-contain"
+          />
+
           <span
             className="flex items-center"
             style={{
@@ -56,7 +62,7 @@ const Navbar = () => {
             }}
           >
             <span style={{ fontWeight: 500 }}>Ever</span>
-            <span style={{ fontWeight: 600, marginLeft: "1px" }}>Care</span>
+            <span style={{ fontWeight: 600, marginLeft: "1px", color: "#2563EB" }}>Care</span>
           </span>
         </Link>
 
@@ -70,10 +76,7 @@ const Navbar = () => {
             The Platform
           </Link>
 
-          <Link
-            to="/services-and-pricing"
-            className="hover:text-gray-900 transition"
-          >
+          <Link to="/services-and-pricing" className="hover:text-gray-900 transition">
             Services
           </Link>
         </nav>
@@ -81,7 +84,7 @@ const Navbar = () => {
         {/* RIGHT ICONS */}
         <div className="hidden md:flex items-center space-x-5">
 
-          {/* Help */}
+          {/* HELP BUTTON */}
           <button
             onClick={openChat}
             className="nav-icon-btn w-10 h-10 flex items-center justify-center rounded-full 
@@ -95,11 +98,11 @@ const Navbar = () => {
                 d="M8.045 9.673a3.956 3.956 
                    0 017.702 0c0 1.756-1.22 2.79-2.273 
                    3.535-.892.627-1.474 1.25-1.474 
-                   2.292v.25M12 17.75h.007v.008H12v-.008Z"/>
+                   2.292v.25M12 17.75h.007v.008H12v-.008Z" />
             </svg>
           </button>
 
-          {/* Region Selector */}
+          {/* REGION SELECTOR */}
           <div className="relative">
             <button
               onClick={() => setRegionOpen(!regionOpen)}
@@ -116,7 +119,7 @@ const Navbar = () => {
                      3m0 18a9.004 9.004 0 01-8.716-6.747M12 
                      3c2.21 0 4 4.03 4 9s-1.79 9-4 
                      9m0-18C9.79 3 8 7.03 8 
-                     12s1.79 9 4 9"/>
+                     12s1.79 9 4 9" />
               </svg>
             </button>
 
@@ -134,7 +137,7 @@ const Navbar = () => {
             )}
           </div>
 
-          {/* User */}
+          {/* USER ICON */}
           <button
             onClick={() => console.log("Login modal soon")}
             className="nav-icon-btn w-10 h-10 flex items-center justify-center rounded-full 
@@ -147,10 +150,10 @@ const Navbar = () => {
               <path strokeLinecap="round" strokeLinejoin="round"
                 d="M15.75 9A3.75 3.75 
                 0 1 1 12 5.25 3.75 3.75 
-                0 0 1 15.75 9Z"/>
+                0 0 1 15.75 9Z" />
               <path strokeLinecap="round" strokeLinejoin="round"
                 d="M4.5 20.25a8.25 8.25 
-                   0 1 1 15 0"/>
+                   0 1 1 15 0" />
             </svg>
           </button>
 
